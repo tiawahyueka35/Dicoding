@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_uts/models/home.dart';
+import 'package:flutter_uts/models/home2.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,7 +14,6 @@ class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text("Vegetable Shop"),
@@ -195,6 +196,37 @@ class HalamanSatu extends StatelessWidget {
             ),
             Text(" "),
             Text(" "),
+            Column(
+              children: [
+                Text(
+                  "- - - List Konsumen - - -",
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+                Text(" "),
+                Container(
+                  child: RaisedButton(
+                    color: Colors.grey[400],
+                    child: Text("Masuk"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HalamanData()),
+                      );
+                    },
+                  ),
+                  height: 40,
+                  width: 80,
+                ),
+                Text(" "),
+                Text(" "),
+              ],
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: Column(
+                children: [],
+              ),
+            ),
           ],
         ),
       ),
@@ -205,15 +237,13 @@ class HalamanSatu extends StatelessWidget {
 class HalamanHijau extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Vegetable Shop"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Tambahkan Item',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
       ),
-      body: Center(
-        child: Row(
-            //
-            ),
-      ),
+      home: Home(),
     );
   }
 }
@@ -221,15 +251,13 @@ class HalamanHijau extends StatelessWidget {
 class HalamanKuning extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Vegetable Shop"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Tambahkan Item',
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
       ),
-      body: Center(
-        child: Row(
-            //
-            ),
-      ),
+      home: Home(),
     );
   }
 }
@@ -237,15 +265,26 @@ class HalamanKuning extends StatelessWidget {
 class HalamanMerah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Vegetable Shop"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Tambahkan Item',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
       ),
-      body: Center(
-        child: Row(
-            //
-            ),
+      home: Home(),
+    );
+  }
+}
+
+class HalamanData extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
       ),
+      home: Homee(),
     );
   }
 }
