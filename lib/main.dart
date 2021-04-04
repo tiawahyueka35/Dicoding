@@ -64,11 +64,11 @@ class HalamanSatu extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(
-                              "Sayuran Hijau",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
+                            Container(
+                              child: RaisedButton(
+                                color: Colors.green[400],
+                                child: Text("Sayuran Hijau"),
+                              ),
                             ),
                             Text(
                               "Kangkung, Bayam, Timun, Sawi, Brokoli, Kacang panjang, Kubis, Selada",
@@ -76,7 +76,7 @@ class HalamanSatu extends StatelessWidget {
                             )
                           ],
                         ),
-                        height: 100,
+                        height: 120,
                         width: 200,
                       ),
                     ],
@@ -103,16 +103,16 @@ class HalamanSatu extends StatelessWidget {
                         height: 100,
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                        margin: EdgeInsets.fromLTRB(10, 10, 0, 20),
                         alignment: Alignment.center,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(
-                              "Sayuran Kuning",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
+                            Container(
+                              child: RaisedButton(
+                                color: Colors.yellow[400],
+                                child: Text("Sayuran Kuning"),
+                              ),
                             ),
                             Text(
                               "Jagung, Paprika, Labu, Kentang, Bawang bombay, Kacang kuning, Bit kuning, Buncis kuning",
@@ -120,7 +120,7 @@ class HalamanSatu extends StatelessWidget {
                             )
                           ],
                         ),
-                        height: 100,
+                        height: 120,
                         width: 200,
                       ),
                     ],
@@ -152,11 +152,11 @@ class HalamanSatu extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(
-                              "Sayuran Merah",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
+                            Container(
+                              child: RaisedButton(
+                                color: Colors.red[400],
+                                child: Text("Sayuran Merah"),
+                              ),
                             ),
                             Text(
                               "Tomat, Cabai, Bawang merah, Bit merah, Paprika merah, Kentang merah, Lobak merah, Selada merah",
@@ -164,7 +164,7 @@ class HalamanSatu extends StatelessWidget {
                             )
                           ],
                         ),
-                        height: 100,
+                        height: 140,
                         width: 200,
                       ),
                     ],
@@ -174,44 +174,8 @@ class HalamanSatu extends StatelessWidget {
             ),
             Text(" "),
             Text(" "),
-            Text(
-              "Masukkan sayuran yang ingin dibeli di Shoping Cart!",
-              style: TextStyle(fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
-            Column(
-              children: [
-                Container(
-                  child: RaisedButton(
-                    child: Text("Shopping Cart"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HalamanDua()),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class HalamanDua extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Vegetable Shop"),
-      ),
-      body: Center(
-        child: Row(
-            //
-            ),
       ),
     );
   }
