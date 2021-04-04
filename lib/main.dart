@@ -68,6 +68,13 @@ class HalamanSatu extends StatelessWidget {
                               child: RaisedButton(
                                 color: Colors.green[400],
                                 child: Text("Sayuran Hijau"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HalamanHijau()),
+                                  );
+                                },
                               ),
                             ),
                             Text(
@@ -112,6 +119,13 @@ class HalamanSatu extends StatelessWidget {
                               child: RaisedButton(
                                 color: Colors.yellow[400],
                                 child: Text("Sayuran Kuning"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HalamanKuning()),
+                                  );
+                                },
                               ),
                             ),
                             Text(
@@ -156,6 +170,13 @@ class HalamanSatu extends StatelessWidget {
                               child: RaisedButton(
                                 color: Colors.red[400],
                                 child: Text("Sayuran Merah"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HalamanMerah()),
+                                  );
+                                },
                               ),
                             ),
                             Text(
@@ -176,6 +197,54 @@ class HalamanSatu extends StatelessWidget {
             Text(" "),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class HalamanHijau extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Vegetable Shop"),
+      ),
+      body: Center(
+        child: Row(
+            //
+            ),
+      ),
+    );
+  }
+}
+
+class HalamanKuning extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Vegetable Shop"),
+      ),
+      body: Center(
+        child: Row(
+            //
+            ),
+      ),
+    );
+  }
+}
+
+class HalamanMerah extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Vegetable Shop"),
+      ),
+      body: Center(
+        child: Row(
+            //
+            ),
       ),
     );
   }
