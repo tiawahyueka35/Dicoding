@@ -23,6 +23,7 @@ class HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Shopping Cart'),
+        leading: Icon(Icons.keyboard_arrow_left),
       ),
       body: Column(children: [
         Expanded(

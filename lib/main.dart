@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_uts/models/home.dart';
-import 'package:flutter_uts/models/home2.dart';
+import 'models/home.dart';
+import 'models/home2.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'UTS',
+    title: 'Dicoding',
     home: HalamanSatu(),
   ));
 }
@@ -13,10 +13,12 @@ void main() {
 class HalamanSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    Orientation orientation = MediaQuery.of(context).orientation;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Vegetable Shop"),
+          title: Text("VegeNotes"),
           backgroundColor: Colors.redAccent[700],
         ),
         body: ListView(
@@ -24,8 +26,16 @@ class HalamanSatu extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Memudahkan Anda dalam mengingat kebutuhan berbelanja dengan memasukkan nama sayuran di keranjang',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 15.0),
+                  ),
+                ),
+                Container(
                   height: 300.0,
-                  margin: const EdgeInsets.only(top: 20.0),
+                  margin: const EdgeInsets.only(top: 90.0),
                   decoration: BoxDecoration(
                     border: Border(
                       top: BorderSide(color: Colors.purple),
@@ -35,7 +45,7 @@ class HalamanSatu extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                          'https://i.pinimg.com/564x/35/3e/b6/353eb6f6a33c1b464f0ae7f8ad3b2d0b.jpg'),
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMDryw3ax1joVJdg0kEuXoGkxEA_hYeU_-Hg&usqp=CAU'),
                     ),
                   ),
                 ),
@@ -43,27 +53,28 @@ class HalamanSatu extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
+                Flex(direction: Axis.horizontal),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.green[900],
                     ),
                   ),
-                  margin: const EdgeInsets.only(top: 10.0),
+                  margin: const EdgeInsets.all(10),
                   child: Row(
-                    children: [
+                    children: <Widget>[
                       Container(
                         child: Image(
                           image: NetworkImage(
-                              'https://i.pinimg.com/564x/d8/b1/d5/d8b1d59c0f8b8f0f0112f712745b0fff.jpg'),
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FppfKKax_4Dq0QkleP_3Gnp08Z72bkCJ5w&usqp=CAU'),
                         ),
-                        height: 100,
+                        height: 70,
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                        margin: EdgeInsets.zero,
                         alignment: Alignment.center,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               child: RaisedButton(
@@ -79,12 +90,20 @@ class HalamanSatu extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "Kangkung, Bayam, Timun, Sawi, Brokoli, Kacang panjang, Kubis, Selada",
+                              "Kangkung",
                               style: TextStyle(color: Colors.black),
-                            )
+                            ),
+                            Text(
+                              "Bayam",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "Sawi",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ],
                         ),
-                        height: 120,
+                        height: 150,
                         width: 200,
                       ),
                     ],
@@ -94,27 +113,28 @@ class HalamanSatu extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
+                Flex(direction: Axis.horizontal),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.green[900],
                     ),
                   ),
-                  margin: const EdgeInsets.only(top: 10.0),
+                  margin: const EdgeInsets.all(10),
                   child: Row(
                     children: [
                       Container(
                         child: Image(
                           image: NetworkImage(
-                              'https://i.pinimg.com/564x/d8/b1/d5/d8b1d59c0f8b8f0f0112f712745b0fff.jpg'),
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FppfKKax_4Dq0QkleP_3Gnp08Z72bkCJ5w&usqp=CAU'),
                         ),
-                        height: 100,
+                        height: 70,
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 10, 0, 20),
+                        margin: EdgeInsets.zero,
                         alignment: Alignment.center,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               child: RaisedButton(
@@ -130,12 +150,20 @@ class HalamanSatu extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "Jagung, Paprika, Labu, Kentang, Bawang bombay, Kacang kuning, Bit kuning, Buncis kuning",
+                              "Jagung",
                               style: TextStyle(color: Colors.black),
-                            )
+                            ),
+                            Text(
+                              "Kentang",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "Labu",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ],
                         ),
-                        height: 120,
+                        height: 150,
                         width: 200,
                       ),
                     ],
@@ -145,27 +173,28 @@ class HalamanSatu extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
+                Flex(direction: Axis.horizontal),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.green[900],
                     ),
                   ),
-                  margin: const EdgeInsets.only(top: 10.0),
+                  margin: const EdgeInsets.all(10),
                   child: Row(
                     children: [
                       Container(
                         child: Image(
                           image: NetworkImage(
-                              'https://i.pinimg.com/564x/d8/b1/d5/d8b1d59c0f8b8f0f0112f712745b0fff.jpg'),
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FppfKKax_4Dq0QkleP_3Gnp08Z72bkCJ5w&usqp=CAU'),
                         ),
-                        height: 100,
+                        height: 70,
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                        margin: EdgeInsets.zero,
                         alignment: Alignment.center,
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               child: RaisedButton(
@@ -181,12 +210,20 @@ class HalamanSatu extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "Tomat, Cabai, Bawang merah, Bit merah, Paprika merah, Kentang merah, Lobak merah, Selada merah",
+                              "Tomat",
                               style: TextStyle(color: Colors.black),
-                            )
+                            ),
+                            Text(
+                              "Cabai",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "Paprika",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ],
                         ),
-                        height: 140,
+                        height: 150,
                         width: 200,
                       ),
                     ],
